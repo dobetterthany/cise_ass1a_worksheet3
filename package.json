@@ -4,6 +4,8 @@
   "description": "MERN_Stack Book Application",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gyeongjae Kim",
@@ -11,9 +13,15 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.5.1",
     "validation": "^0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobetterthany/cise_ass1a_worksheet3.git"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
