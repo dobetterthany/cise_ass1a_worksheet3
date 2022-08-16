@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
 
-function GetID() {
-  const{id} =useParams();
-  console.log(id);
-  return (
-    <div>
-      your expected id : {id}
-    </div>
-  )
+function getParameter(){
+  const url = window.location.href;
+  const urlArray =url.split("/");
+  return urlArray[urlArray.length-1];
 }
+
 
 class showBookDetails extends Component {
   constructor(props) {
@@ -24,7 +21,7 @@ class showBookDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:8082/api/books/'+this.props.match.params.id)
+      .get('http://localhost:8082/api/books/'+getParameter())
       .then(res => {
         // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
