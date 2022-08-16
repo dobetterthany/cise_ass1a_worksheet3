@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "app": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cise_ass1a_worksheet3 npm run build --cise_ass1a_worksheet3"
   },
   "author": "Gyeongjae Kim",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "body-parser": "^1.20.0",
     "config": "^3.3.7",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.5.1",
     "validation": "^0.0.1"
